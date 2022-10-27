@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import Confetti from "react-confetti";
 
 function Square(props) {
   return (
@@ -105,6 +106,7 @@ class Game extends React.Component {
 
     return (
       <div className="game">
+        {winner && <Confetti />}
         <h2>{status}</h2>
         <div className="game-board">
           <Board
